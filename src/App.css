@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #282c34;
+  /* Dark background */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #f9f9f9;
+  /* Light text for contrast */
+}
+
+/* Game Container */
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #1e1e1e;
+  /* Darker background for the game container */
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.1);
+  /* Subtle light shadow */
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #f1f1f1;
+  /* Light text color */
+}
+
+/* Board Row */
+.board-row {
+  display: flex;
+}
+
+/* Square Styling */
+.square {
+  background: #ff6b6b;
+  /* Vibrant red for squares */
+  border: 2px solid #ffdd57;
+  /* Bold yellow border */
+  float: left;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 100px;
+  height: 100px;
+  width: 100px;
+  margin-right: -2px;
+  margin-top: -2px;
+  padding: 0;
+  text-align: center;
+  color: #f9f9f9;
+  /* Light text color */
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.square:hover {
+  background: #f94d4d;
+  /* Darker red on hover */
+  box-shadow: 0px 4px 10px rgba(255, 221, 87, 0.4);
+  /* Yellow shadow */
+}
+
+.square:focus {
+  outline: none;
+}
+
+/* Winner Styling */
+.square.winner {
+  background-color: #1dd1a1;
+  /* Bright green for winning squares */
+  color: white;
+  box-shadow: 0px 4px 12px rgba(29, 209, 161, 0.6);
+  /* Green glow effect */
+  animation: winner-glow 1s ease infinite alternate;
+}
+
+@keyframes winner-glow {
+  from {
+    box-shadow: 0px 0px 10px rgba(29, 209, 161, 0.6);
+  }
+
+  to {
+    box-shadow: 0px 0px 20px rgba(29, 209, 161, 1);
+  }
+}
+
+/* Button Styling */
+button {
+  margin-top: 20px;
+  background-color: #e99494;
+  /* Bright blue for button */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3778c2;
+  /* Darker blue on hover */
+}
